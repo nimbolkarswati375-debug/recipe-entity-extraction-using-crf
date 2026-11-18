@@ -1,0 +1,52 @@
+RECIPE ENTITY EXTRACTION USING CONDITIONAL RANDOM FIELDS (CRF)
+CLASSIFICATION REPORTS
+
+============================================================
+1. TRAINING DATASET - FLAT CLASSIFICATION REPORT
+============================================================
+
+              precision    recall  f1-score   support
+
+ ingredient     0.9991    0.9998    0.9994      5323
+       unit     0.9988    1.0000    0.9994       811
+   quantity     0.9990    0.9939    0.9964       980
+
+   accuracy                         0.9990      7114
+  macro avg     0.9989    0.9979    0.9984      7114
+weighted avg     0.9990    0.9990    0.9990      7114
+
+
+============================================================
+2. VALIDATION DATASET - FLAT CLASSIFICATION REPORT
+============================================================
+
+              precision    recall  f1-score   support
+
+ ingredient     0.9991    0.9995    0.9993      2107
+       unit     0.9944    0.9972    0.9958       358
+   quantity     0.9951    0.9903    0.9927       411
+
+   accuracy                         0.9979      2876
+  macro avg     0.9962    0.9957    0.9959      2876
+weighted avg     0.9979    0.9979    0.9979      2876
+
+
+============================================================
+3. VALIDATION ERROR ANALYSIS SUMMARY
+============================================================
+
+Total validation recipes:       84
+Total validation tokens:        2876
+Correctly classified tokens:    2870
+Misclassified tokens:           6
+Validation accuracy:            0.9979 (99.79%)
+
+Misclassified tokens by true label:
+- Ingredient: 1
+- Unit:       1
+- Quantity:   4
+
+Note:
+The classification metrics above reproduce the training and validation
+results provided for this project. The error-analysis summary reports
+six misclassified validation tokens.
